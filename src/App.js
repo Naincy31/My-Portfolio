@@ -2,6 +2,9 @@ import Experience from "./components/Experience";
 import Overview from "./components/Overview";
 import Projects from "./components/Projects";
 import { useRef, useState, useEffect } from "react";
+import githubIcon from '../src/assets/github.png';
+import lnIcon from "../src/assets/linkedin.png"
+import mediumIcon from "../src/assets/medium.png"
 
 function App() {
   const [activeSection, setActiveSection] = useState('about')
@@ -49,7 +52,7 @@ function App() {
     <div className="min-h-screen flex bg-gray-900 text-white pt-20 px-14">
       
       {/* Left Section */}
-      <div className="left-section fixed w-1/2 h-full flex flex-col gap-7 z-10 px-10">
+      <div className="left-section fixed w-1/2 h-full flex flex-col gap-7 z-10 px-44">
         <div className="gen-info">
           <h1 className="text-5xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Naincy Rathore</h1>
           <h4 className="text-xl font-semibold text-slate-200 text-opacity-75">Software Developer, Quantiphi</h4>
@@ -93,8 +96,9 @@ function App() {
           </div>
         </div>
         <div className="icons flex gap-4 mt-8">
-          <i className="fa fa-github text-2xl cursor-pointer hover:text-blue-400"></i>
-          <i className="fa fa-linkedin-square text-2xl cursor-pointer hover:text-blue-400"></i>
+          <a href="https://www.linkedin.com/in/iamnaincyrathore/" target="_blank" rel="noopener noreferrer"><img src={lnIcon} alt="ln icon" className="filter invert"/></a>
+          <a href="https://github.com/Naincy31" target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt="github icon" className="filter invert"/></a>
+          <a href="https://naincyrathore543.medium.com/" target="_blank" rel="noopener noreferrer"><img src={mediumIcon} alt="medium icon" className="filter invert"/></a>
         </div>
       </div>
 

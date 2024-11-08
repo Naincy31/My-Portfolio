@@ -1,8 +1,8 @@
 const Experience = () => {
   return (
-    <div>
-      <h2 className="text-sm font-bold uppercase mb-3">Experience</h2>
+    <div className="mb-9 mt-9">
       <div className="exp-list flex flex-col gap-8">
+        {/* 1st Exp */}
         <div className="exp flex items-center gap-9 hover:bg-gray-700 hover:bg-opacity-30 rounded-lg transition ease-in-out duration-200 p-3">
           <div className="project-duration w-1/4">
             <p className="text-xs text-slate-200 text-opacity-45 font-bold">SEP 2023 - PRESENT</p>
@@ -17,8 +17,9 @@ const Experience = () => {
             </div>
           </div>
         </div>
+        {/* 2nd Exp */}
         <div className="exp flex items-center gap-9 hover:bg-gray-700 hover:bg-opacity-30 rounded-lg transition ease-in-out duration-200 p-3">
-          <div className="exp-duration w-1/4">
+          <div className="project-duration w-1/4">
             <p className="text-xs text-slate-200 text-opacity-45 font-bold">JUL - SEP 2023</p>
           </div>
           <div className="project-info flex flex-col gap-4 w-3/4">
@@ -35,8 +36,9 @@ const Experience = () => {
             </div>
           </div>
         </div>
+        {/* 3rd Exp */}
         <div className="exp flex items-center gap-9 hover:bg-gray-700 hover:bg-opacity-30 rounded-lg transition ease-in-out duration-200 p-3">
-          <div className="exp-duration w-1/4">
+          <div className="project-duration w-1/4">
             <p className="text-xs text-slate-200 text-opacity-45 font-bold">JAN - JUL 2023</p>
           </div>
           <div className="project-info flex flex-col gap-4 w-3/4">
@@ -54,8 +56,9 @@ const Experience = () => {
             </div>
           </div>
         </div>
+        {/* 4th Exp */}
         <div className="exp flex items-center gap-9 hover:bg-gray-700 hover:bg-opacity-30 rounded-lg transition ease-in-out duration-200 p-3">
-          <div className="exp-duration w-1/4">
+          <div className="project-duration w-1/4">
             <p className="text-xs text-slate-200 text-opacity-45 font-bold">AUG - DEC 2022</p>
           </div>
           <div className="project-info flex flex-col gap-4 w-3/4">
@@ -69,8 +72,9 @@ const Experience = () => {
             </div>
           </div>
         </div>
+        {/* 5th Exp */}
         <div className="exp flex items-center gap-9 hover:bg-gray-700 hover:bg-opacity-30 rounded-lg transition ease-in-out duration-200 p-3">
-          <div className="exp-duration w-1/4">
+          <div className="project-duration w-1/4">
             <p className="text-xs text-slate-200 text-opacity-45 font-bold">APR - JUN 2021</p>
           </div>
           <div className="project-info flex flex-col gap-4 w-3/4">
