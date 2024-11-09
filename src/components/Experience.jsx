@@ -12,8 +12,8 @@ const Experience = () => {
             <p className="project-desc text-sm text-slate-200 text-opacity-45">Collaborated with a team to create and implement bot solutions for Google Fiber, enhancing customer experience for a top U.S.
               Internet Service Provider. Leveraged Dialogflow CX to drive a 95% deflection rate.</p>
             <div className="tech-stack flex gap-3">
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">Dialogflow CX</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">Google Cloud Platform</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">Dialogflow CX</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">Google Cloud Platform</p>
             </div>
           </div>
         </div>
@@ -27,12 +27,12 @@ const Experience = () => {
             <p className="project-desc text-sm text-slate-200 text-opacity-45">Contributed as a Full Stack Developer for Baioniq, an enterprise-grade generative AI platform that enables quick deployment of
               AI capabilities for domain-specific tasks.</p>
             <div className="tech-stack flex gap-3 flex-wrap">
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">JavaScript</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">React</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">Node.js</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">Express.js</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">ElasticSearch</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">E2E Testing</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">JavaScript</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">React</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">Node.js</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">Express.js</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">ElasticSearch</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">E2E Testing</p>
             </div>
           </div>
         </div>
@@ -46,13 +46,13 @@ const Experience = () => {
             <p className="project-desc text-sm text-slate-200 text-opacity-45">Developed and maintained the full stack of a custom experience management platform, empowering
               organizations to build, integrate, automate, and unify virtual agent experiences.</p>
             <div className="tech-stack flex gap-3 flex-wrap">
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">JavaScript</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">React</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">Node.js</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">Express.js</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">Firebase</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">RTL</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">Google Cloud Platform</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">JavaScript</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">React</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">Node.js</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">Express.js</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">Firebase</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">RTL</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">Google Cloud Platform</p>
             </div>
           </div>
         </div>
@@ -66,9 +66,9 @@ const Experience = () => {
             <p className="project-desc text-sm text-slate-200 text-opacity-45">Spearheaded the creation of a user-friendly mobile booking chatbot named MobileBooker Buddy. Developed APIs
               to manage mobile data and facilitate seamless data retrieval, enhancing the overall user experience</p>
             <div className="tech-stack flex gap-3 flex-wrap">
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">JavaScript</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">Node.js</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">Express.js</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">JavaScript</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">Node.js</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">Express.js</p>
             </div>
           </div>
         </div>
@@ -81,9 +81,9 @@ const Experience = () => {
             <h1 className="project-title">React Developer Intern, Persistent - Expense Tracker</h1>
             <p className="project-desc text-sm text-slate-200 text-opacity-45">Developed a robust expense tracker application featuring user authentication for secure expense tracking.</p>
             <div className="tech-stack flex flex-wrap gap-3">
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">JavaScript</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">React</p>
-              <p className="bg-teal-400 rounded-lg p-2 text-xs">Firebase</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">JavaScript</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">React</p>
+              <p className="border border-tealCustom rounded-lg p-2 text-xs">Firebase</p>
             </div>
           </div>
         </div>

@@ -15,6 +15,10 @@ module.exports = {
         '100%': { color: '#ffffff' },
       },
     },
+    colors: {
+      tealCustom: '#0D8B7B',
+      grayCustom: '#8290A5'
+    }
   },
   plugins: [],
 }

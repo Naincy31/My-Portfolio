@@ -49,18 +49,18 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen flex bg-gray-900 text-white pt-20 px-14">
+    <div className="min-h-screen bg-gray-900 text-white pt-20 px-14 md:flex md:flex-row flex-col">
       
       {/* Left Section */}
-      <div className="left-section fixed w-1/2 h-full flex flex-col gap-7 z-10 px-44">
+      <div className="left-section w-full lg:fixed lg:w-1/2 h-auto flex flex-col gap-7 z-10 lg:px-44 md:mb-10 lg:mb-0 px-10 mb-9">
         <div className="gen-info">
-          <h1 className="text-5xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Naincy Rathore</h1>
+          <h1 className="text-5xl font-bold mb-3">Naincy Rathore</h1>
           <h4 className="text-xl font-semibold text-slate-200 text-opacity-75">Software Developer, Quantiphi</h4>
-          <p className="text-base mt-5 text-slate-200 text-opacity-45 w-80">Building seamless front-end and back-end solutions with a focus on efficiency and continuous learning.</p>
+          <p className="text-lg mt-5 text-grayCustom w-80">Building seamless front-end and back-end solutions with a focus on efficiency and continuous learning.</p>
         </div>
 
         {/* Navigation Links */}
-        <div className="sections mt-8 space-y-4">
+        <div className="sections mt-8 space-y-4 hidden md:block">
 
           {/* About */}
           <div className={`
@@ -103,7 +103,7 @@ function App() {
       </div>
 
       {/* Right Section with content */}
-      <div className="right-section w-1/2 overflow-y-auto h-full ml-[50%] px-10">
+      <div className="right-section w-full lg:w-1/2 overflow-y-auto h-full lg:ml-[50%] px-10">
         <div ref={aboutRef} id="about">
           <Overview />
         </div>
