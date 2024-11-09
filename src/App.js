@@ -64,41 +64,41 @@ function App() {
 
           {/* About */}
           <div className={`
-            flex items-center gap-2 text-slate-200 text-opacity-45 cursor-pointer transition-all duration-200 ease-in-out group 
+            flex items-center gap-2 text-grayCustom cursor-pointer transition-all duration-200 ease-in-out group 
             ${activeSection !== 'about' && 'hover:text-white '}
             `} 
             onClick={() => scrollToSection(aboutRef)}
           >
             <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'about' ? 'w-[7%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[7%]'}`}></div>
-            <h6 className={`text-sm uppercase ${activeSection === 'about' && 'text-white'}`}>About</h6>
+            <h6 className={`text-xs font-bold tracking-widest uppercase ${activeSection === 'about' && 'text-white'}`}>About</h6>
           </div>
 
           {/* Experience */}
           <div className={`
-            flex items-center gap-2 text-slate-200 text-opacity-45 cursor-pointer transition-all duration-200 ease-in-out group 
+            flex items-center gap-2 text-grayCustom cursor-pointer transition-all duration-200 ease-in-out group 
             ${activeSection !== 'experience' && 'hover:text-white '}
             `} 
             onClick={() => scrollToSection(experienceRef)}
           >
             <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'experience' ? 'w-[7%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[7%]'}`}></div>
-            <h6 className={`text-sm uppercase ${activeSection === 'experience' && 'text-white'}`}>Experience</h6>
+            <h6 className={`text-xs font-bold tracking-widest uppercase ${activeSection === 'experience' && 'text-white'}`}>Experience</h6>
           </div>
 
           {/* Projects */}
           <div className={`
-            flex items-center gap-2 text-slate-200 text-opacity-45 cursor-pointer transition-all duration-200 ease-in-out group 
+            flex items-center gap-2 text-grayCustom cursor-pointer transition-all duration-200 ease-in-out group 
             ${activeSection !== 'projects' && 'hover:text-white '}
             `} 
             onClick={() => scrollToSection(projectsRef)}
           >
             <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'projects' ? 'w-[7%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[7%]'}`}></div>
-            <h6 className={`text-sm uppercase ${activeSection === 'projects' && 'text-white'}`}>Projects</h6>
+            <h6 className={`text-xs font-bold tracking-widest uppercase ${activeSection === 'projects' && 'text-white'}`}>Projects</h6>
           </div>
         </div>
-        <div className="icons flex gap-4 mt-8">
-          <a href="https://www.linkedin.com/in/iamnaincyrathore/" target="_blank" rel="noopener noreferrer"><img src={lnIcon} alt="ln icon" className="filter invert"/></a>
-          <a href="https://github.com/Naincy31" target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt="github icon" className="filter invert"/></a>
-          <a href="https://naincyrathore543.medium.com/" target="_blank" rel="noopener noreferrer"><img src={mediumIcon} alt="medium icon" className="filter invert"/></a>
+        <div className="icons flex gap-4 mt-3 mb-12 md:mt-20">
+          <a href="https://www.linkedin.com/in/iamnaincyrathore/" target="_blank" rel="noopener noreferrer"><img src={lnIcon} alt="ln icon" className="filter invert w-7 h-7 md:w-9 md:h-9"/></a>
+          <a href="https://github.com/Naincy31" target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt="github icon" className="filter invert w-8 h-8 md:w-10 md:h-10"/></a>
+          <a href="https://naincyrathore543.medium.com/" target="_blank" rel="noopener noreferrer"><img src={mediumIcon} alt="medium icon" className="filter invert w-8 h-8 md:w-10 md:h-10"/></a>
         </div>
       </div>
 
