@@ -3,16 +3,16 @@ import projectManagement from '../assets/project-management.png';
 
 const Projects = () => {
   return (
-    <div className='mb-16'>
-      <h2 className="text-sm font-bold uppercase mb-3">Projects</h2>
+    <div className='mb-16 mt-9'>
+      <h2 className="text-sm font-bold uppercase md:mb-3 mb-8 tracking-widest">Projects</h2>
       <div className="projects-list flex flex-col gap-8">
         {/* 1st Project */}
         <a href="https://expense-tracker-f80d4.web.app/" target="_blank" rel="noopener noreferrer">
-          <div className="project flex items-center gap-9 hover:bg-gray-700 hover:bg-opacity-30 rounded-lg transition ease-in-out duration-200 group p-3">
-            <div className="project-image w-1/4 border-2 border-gray-700 rounded-sm group-hover:border-gray-400 transition-colors duration-200">
-              <img src={expenseTracker} alt="expense-tracker" className='h-16'/>
+          <div className="project flex flex-col-reverse md:flex-row md:items-center gap-9 md:hover:bg-gray-700 md:hover:bg-opacity-30 rounded-lg transition ease-in-out duration-200 group md:p-3">
+            <div className="project-image md:w-1/4 w-1/2 h-[98] border-2 border-gray-700 rounded-sm group-hover:border-gray-400 transition-colors duration-200">
+              <img src={expenseTracker} alt="expense-tracker" className='h-24 w-full'/>
             </div>
-            <div className="project-info flex flex-col gap-4 w-3/4">
+            <div className="project-info flex flex-col gap-4 md:w-3/4">
               <span className="project-title transition-colors duration-200 group-hover:text-teal-500">Expense Tracker
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
               </span>
@@ -32,11 +32,11 @@ const Projects = () => {
         
         {/* 2nd Project */}
         <a href="https://projectmanagementsite-ca0dc.web.app/" target="_blank" rel="noopener noreferrer">
-          <div className="project flex items-center gap-9 hover:bg-gray-700 hover:bg-opacity-30 rounded-lg transition ease-in-out duration-200 p-3 group">
-            <div className="project-image w-1/4 border-2 border-gray-700 rounded-sm group-hover:border-gray-400 transition-colors duration-200">
-              <img src={projectManagement} alt="project-manegement"/>
+          <div className="project flex flex-col-reverse md:flex-row md:items-center gap-9 md:hover:bg-gray-700 md:hover:bg-opacity-30 rounded-lg transition ease-in-out duration-200 md:p-3 group">
+            <div className="project-image md:w-1/4 w-1/2 h-[98] border-2 border-gray-700 rounded-sm group-hover:border-gray-400 transition-colors duration-200">
+              <img src={projectManagement} alt="project-manegement" className='h-24 w-full'/>
             </div>
-            <div className="project-info flex flex-col gap-4 w-3/4">
+            <div className="project-info flex flex-col gap-4 md:w-3/4">
               <span className="project-title transition-colors duration-200 group-hover:text-teal-500">Project Management Site
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
               </span>

@@ -49,10 +49,10 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white pt-20 px-14 md:flex md:flex-row flex-col">
+    <div className="min-h-screen bg-gray-900 text-white pt-20 md:px-14 lg:flex lg:flex-row flex-col min-w-screen">
       
       {/* Left Section */}
-      <div className="left-section w-full lg:fixed lg:w-1/2 h-auto flex flex-col gap-7 z-10 lg:px-44 md:mb-10 lg:mb-0 px-10 mb-9">
+      <div className="left-section w-full lg:fixed lg:w-1/2 h-auto flex flex-col gap-7 z-10 lg:px-44 lg:mb-0 px-10 mb-9">
         <div className="gen-info">
           <h1 className="text-5xl font-bold mb-3">Naincy Rathore</h1>
           <h4 className="text-xl font-semibold text-slate-200 text-opacity-75">Software Developer, Quantiphi</h4>
@@ -60,42 +60,42 @@ function App() {
         </div>
 
         {/* Navigation Links */}
-        <div className="sections mt-8 space-y-4 hidden md:block">
+        <div className="sections mt-8 space-y-4 hidden lg:block">
 
           {/* About */}
           <div className={`
-            flex items-center gap-2 text-grayCustom cursor-pointer transition-all duration-200 ease-in-out group 
+            flex items-center gap-2 text-grayCustom mb-5 cursor-pointer transition-all duration-200 ease-in-out group 
             ${activeSection !== 'about' && 'hover:text-white '}
             `} 
             onClick={() => scrollToSection(aboutRef)}
           >
-            <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'about' ? 'w-[7%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[7%]'}`}></div>
+            <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'about' ? 'w-[10%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[10%]'}`}></div>
             <h6 className={`text-xs font-bold tracking-widest uppercase ${activeSection === 'about' && 'text-white'}`}>About</h6>
           </div>
 
           {/* Experience */}
           <div className={`
-            flex items-center gap-2 text-grayCustom cursor-pointer transition-all duration-200 ease-in-out group 
+            flex items-center gap-2 text-grayCustom mb-5 cursor-pointer transition-all duration-200 ease-in-out group 
             ${activeSection !== 'experience' && 'hover:text-white '}
             `} 
             onClick={() => scrollToSection(experienceRef)}
           >
-            <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'experience' ? 'w-[7%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[7%]'}`}></div>
+            <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'experience' ? 'w-[10%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[10%]'}`}></div>
             <h6 className={`text-xs font-bold tracking-widest uppercase ${activeSection === 'experience' && 'text-white'}`}>Experience</h6>
           </div>
 
           {/* Projects */}
           <div className={`
-            flex items-center gap-2 text-grayCustom cursor-pointer transition-all duration-200 ease-in-out group 
+            flex items-center gap-2 text-grayCustom mb-5 cursor-pointer transition-all duration-200 ease-in-out group 
             ${activeSection !== 'projects' && 'hover:text-white '}
             `} 
             onClick={() => scrollToSection(projectsRef)}
           >
-            <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'projects' ? 'w-[7%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[7%]'}`}></div>
+            <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'projects' ? 'w-[10%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[10%]'}`}></div>
             <h6 className={`text-xs font-bold tracking-widest uppercase ${activeSection === 'projects' && 'text-white'}`}>Projects</h6>
           </div>
         </div>
-        <div className="icons flex gap-4 mt-3 mb-12 md:mt-20">
+        <div className="icons flex gap-4 mt-2 mb-16 lg:mt-20">
           <a href="https://www.linkedin.com/in/iamnaincyrathore/" target="_blank" rel="noopener noreferrer"><img src={lnIcon} alt="ln icon" className="filter invert w-7 h-7 md:w-9 md:h-9"/></a>
           <a href="https://github.com/Naincy31" target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt="github icon" className="filter invert w-8 h-8 md:w-10 md:h-10"/></a>
           <a href="https://naincyrathore543.medium.com/" target="_blank" rel="noopener noreferrer"><img src={mediumIcon} alt="medium icon" className="filter invert w-8 h-8 md:w-10 md:h-10"/></a>
@@ -103,7 +103,7 @@ function App() {
       </div>
 
       {/* Right Section with content */}
-      <div className="right-section w-full lg:w-1/2 overflow-y-auto h-full lg:ml-[50%] px-10">
+      <div className="right-section w-full lg:w-1/2 overflow-y-auto h-full lg:ml-[50%] px-10 min-h-screen">
         <div ref={aboutRef} id="about">
           <Overview />
         </div>

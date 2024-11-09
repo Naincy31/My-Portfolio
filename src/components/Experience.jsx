@@ -1,7 +1,7 @@
 const Experience = () => {
   return (
     <div className="mb-9 mt-9">
-      <h2 className="text-sm font-bold uppercase mb-3">Experience</h2>
+      <h2 className="text-sm font-bold uppercase md:mb-3 mb-8 tracking-widest">Experience</h2>
       <div className="exp-list flex flex-col gap-8">
         {/* 1st Exp */}
         <div className="exp flex items-center gap-9 hover:bg-gray-700 hover:bg-opacity-30 rounded-lg transition ease-in-out duration-200 p-3">
