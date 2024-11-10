@@ -5,14 +5,17 @@ import { useRef, useState, useEffect } from "react";
 import githubIcon from '../src/assets/github.png';
 import lnIcon from "../src/assets/linkedin.png"
 import mediumIcon from "../src/assets/medium.png"
+import Achievements from "./components/Achievements";
 
 function App() {
   const [activeSection, setActiveSection] = useState('about')
-
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  
   //refs for each section
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
+  const achievementsRef = useRef(null);
 
 
   // Function to scroll to the Experience section
@@ -41,6 +44,7 @@ function App() {
     if (aboutRef.current) observer.observe(aboutRef.current);
     if (experienceRef.current) observer.observe(experienceRef.current);
     if (projectsRef.current) observer.observe(projectsRef.current);
+    if (achievementsRef.current) observer.observe(achievementsRef.current);
 
     return () => {
       // Clean up observers on unmount
@@ -48,11 +52,29 @@ function App() {
     };
   }, []);
 
+  // Mouse movement handler
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gray-900 text-white pt-20 md:px-14 lg:flex lg:flex-row flex-col min-w-screen">
-      
+    <div className="relative min-h-screen bg-gray-900 text-white pt-20 md:px-14 lg:flex lg:flex-row flex-col min-w-screen">
+      {/* Radial gradient overlay that follows mouse */}
+      <div
+        className="pointer-events-none fixed inset-0 z-30 transition duration-300"
+        style={{
+          background: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
+        }}
+      ></div>
       {/* Left Section */}
-      <div className="left-section w-full lg:fixed lg:w-1/2 h-auto flex flex-col gap-7 z-10 lg:px-44 lg:mb-0 px-10 mb-9">
+      <div className="left-section w-full lg:fixed lg:w-1/2 h-auto flex flex-col gap-7 z-10 lg:px-36 lg:mb-0 px-10 mb-9">
         <div className="gen-info">
           <h1 className="text-5xl font-bold mb-3">Naincy Rathore</h1>
           <h4 className="text-xl font-semibold text-slate-200 text-opacity-75">Software Developer, Quantiphi</h4>
@@ -94,6 +116,18 @@ function App() {
             <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'projects' ? 'w-[10%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[10%]'}`}></div>
             <h6 className={`text-xs font-bold tracking-widest uppercase ${activeSection === 'projects' && 'text-white'}`}>Projects</h6>
           </div>
+
+          {/* Achievements */}
+          <div className={`
+            flex items-center gap-2 text-grayCustom mb-5 cursor-pointer transition-all duration-200 ease-in-out group 
+            ${activeSection !== 'achievements' && 'hover:text-white '}
+            `} 
+            onClick={() => scrollToSection(achievementsRef)}
+          >
+            <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'achievements' ? 'w-[10%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[10%]'}`}></div>
+            <h6 className={`text-xs font-bold tracking-widest uppercase ${activeSection === 'achievements' && 'text-white'}`}>Achievements</h6>
+          </div>
+
         </div>
         <div className="icons flex gap-4 mt-2 mb-16 lg:mt-20">
           <a href="https://www.linkedin.com/in/iamnaincyrathore/" target="_blank" rel="noopener noreferrer"><img src={lnIcon} alt="ln icon" className="filter invert w-7 h-7 md:w-9 md:h-9"/></a>
@@ -112,6 +146,9 @@ function App() {
         </div>
         <div ref={projectsRef} id="projects">
           <Projects />
+        </div>
+        <div ref={achievementsRef} id="achievements">
+          <Achievements />
         </div>
       </div>
     </div>
