@@ -11,7 +11,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('about')
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [typedText, setTypedText] = useState("")
-  const text = "Building seamless front-end and back-end solutions with a focus on efficiency and continuous learning."
+  const text = "  Building seamless front-end and back-end solutions with a focus on efficiency and continuous learning."
 
   //refs for each section
   const aboutRef = useRef(null);
@@ -28,17 +28,18 @@ function App() {
   }
 
   useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
+    let index = 0
+    const typeText = () => {
       setTypedText((prev) => prev + text[index])
       index++
       if (index === text.length - 1) {
         clearInterval(interval)
       }
-    }, 50)
+    };
 
+    const interval = setInterval(typeText, 50)
     return () => clearInterval(interval)
-  }, [])
+  }, [text])
 
 
   // Intersection Observer to track active section
