@@ -9,8 +9,10 @@ import Achievements from "./components/Achievements";
 
 function App() {
   const [activeSection, setActiveSection] = useState('about')
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [typedText, setTypedText] = useState("")
+  const text = "Building seamless front-end and back-end solutions with a focus on efficiency and continuous learning."
+
   //refs for each section
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
@@ -21,21 +23,35 @@ function App() {
   // Function to scroll to the Experience section
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
+      ref.current.scrollIntoView({ behavior: "smooth" })
     }
-  };
+  }
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setTypedText((prev) => prev + text[index])
+      index++
+      if (index === text.length - 1) {
+        clearInterval(interval)
+      }
+    }, 50)
+
+    return () => clearInterval(interval)
+  }, [])
+
 
   // Intersection Observer to track active section
   useEffect(() => {
     const observerOptions = {
       root: null,
       threshold: 0.5, // Trigger when 50% of section is in view
-    };
+    }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setActiveSection(entry.target.id); // Set active section based on which section is in view
+          setActiveSection(entry.target.id) // Set active section based on which section is in view
         }
       });
     }, observerOptions);
@@ -49,20 +65,20 @@ function App() {
     return () => {
       // Clean up observers on unmount
       observer.disconnect();
-    };
-  }, []);
+    }
+  }, [])
 
   // Mouse movement handler
   useEffect(() => {
     const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
+      setMousePosition({ x: e.clientX, y: e.clientY })
+    }
+    window.addEventListener('mousemove', handleMouseMove)
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mousemove', handleMouseMove)
     };
-  }, []);
+  }, [])
 
   return (
     <div className="relative min-h-screen bg-gray-900 text-white pt-20 md:px-14 lg:flex lg:flex-row flex-col min-w-screen">
@@ -78,7 +94,7 @@ function App() {
         <div className="gen-info">
           <h1 className="text-5xl font-bold mb-3">Naincy Rathore</h1>
           <h4 className="text-xl font-semibold text-slate-200 text-opacity-75">Software Developer, Quantiphi</h4>
-          <p className="text-lg mt-5 text-grayCustom w-80">Building seamless front-end and back-end solutions with a focus on efficiency and continuous learning.</p>
+          <p className="text-lg mt-5 text-grayCustom w-80">{typedText}</p>
         </div>
 
         {/* Navigation Links */}
@@ -88,7 +104,7 @@ function App() {
           <div className={`
             flex items-center gap-2 text-grayCustom mb-5 cursor-pointer transition-all duration-200 ease-in-out group 
             ${activeSection !== 'about' && 'hover:text-white '}
-            `} 
+            `}
             onClick={() => scrollToSection(aboutRef)}
           >
             <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'about' ? 'w-[10%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[10%]'}`}></div>
@@ -99,7 +115,7 @@ function App() {
           <div className={`
             flex items-center gap-2 text-grayCustom mb-5 cursor-pointer transition-all duration-200 ease-in-out group 
             ${activeSection !== 'experience' && 'hover:text-white '}
-            `} 
+            `}
             onClick={() => scrollToSection(experienceRef)}
           >
             <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'experience' ? 'w-[10%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[10%]'}`}></div>
@@ -110,7 +126,7 @@ function App() {
           <div className={`
             flex items-center gap-2 text-grayCustom mb-5 cursor-pointer transition-all duration-200 ease-in-out group 
             ${activeSection !== 'projects' && 'hover:text-white '}
-            `} 
+            `}
             onClick={() => scrollToSection(projectsRef)}
           >
             <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'projects' ? 'w-[10%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[10%]'}`}></div>
@@ -121,7 +137,7 @@ function App() {
           <div className={`
             flex items-center gap-2 text-grayCustom mb-5 cursor-pointer transition-all duration-200 ease-in-out group 
             ${activeSection !== 'achievements' && 'hover:text-white '}
-            `} 
+            `}
             onClick={() => scrollToSection(achievementsRef)}
           >
             <div className={`border-t-2 transition-all duration-200 ease-in-out ${activeSection === 'achievements' ? 'w-[10%] border-white' : 'border-gray-500 w-[5%] group-hover:border-white group-hover:w-[10%]'}`}></div>
@@ -130,9 +146,9 @@ function App() {
 
         </div>
         <div className="icons flex gap-4 mt-2 mb-16 lg:mt-20">
-          <a href="https://www.linkedin.com/in/iamnaincyrathore/" target="_blank" rel="noopener noreferrer"><img src={lnIcon} alt="ln icon" className="filter invert w-7 h-7 md:w-9 md:h-9"/></a>
-          <a href="https://github.com/Naincy31" target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt="github icon" className="filter invert w-8 h-8 md:w-10 md:h-10"/></a>
-          <a href="https://naincyrathore543.medium.com/" target="_blank" rel="noopener noreferrer"><img src={mediumIcon} alt="medium icon" className="filter invert w-8 h-8 md:w-10 md:h-10"/></a>
+          <a href="https://www.linkedin.com/in/iamnaincyrathore/" target="_blank" rel="noopener noreferrer"><img src={lnIcon} alt="ln icon" className="filter invert w-7 h-7 md:w-9 md:h-9" /></a>
+          <a href="https://github.com/Naincy31" target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt="github icon" className="filter invert w-8 h-8 md:w-10 md:h-10" /></a>
+          <a href="https://naincyrathore543.medium.com/" target="_blank" rel="noopener noreferrer"><img src={mediumIcon} alt="medium icon" className="filter invert w-8 h-8 md:w-10 md:h-10" /></a>
         </div>
       </div>
 
