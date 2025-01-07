@@ -9,7 +9,7 @@ const Overview = () => {
         <p className="text-base">In my free time, I love experimenting with new app ideas, bridging front-end aesthetics with robust back-end functionality.</p>
         <p className="text-base">When I’m not coding, you’ll likely find me exploring new destinations, and hopping between cafes.</p>
         <a 
-          href="https://storage.googleapis.com/resume-hosting/67305bed77584.pdf" 
+          href="https://lime-arleyne-13.tiiny.site/" 
           className="font-bold text-white text-md bg-teal-400 w-44 text-center p-2 rounded-3xl mt-5"
           target="_blank" 
           rel="noopener noreferrer"
