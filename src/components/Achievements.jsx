@@ -34,7 +34,7 @@ const achievements = [
 
 const Achievements = () => {
   return (
-    <div className="achievements-section flex flex-col items-center bg-gray-900">
+    <div className="achievements-section flex flex-col items-center bg-gray-900 mb-10">
       <h2 className="text-4xl font-bold mb-12 text-center text-white">Achievements</h2>
       <div className="achievements-list flex gap-8">
         {achievements.map((achievement, index) => (
